@@ -15,8 +15,8 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
         'name' => 'Admin',
-        'email' => env('LOGIN_EMAIL'),
-        'password' => Hash::make(env('LOGIN_PASSWORD')),
+        'email' => config('auth.default.email'),
+        'password' => Hash::make(config('auth.default.password')),
         ]);
     }
 }
