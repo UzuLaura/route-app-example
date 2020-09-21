@@ -16,7 +16,7 @@ class CreateRouteInfoTable extends Migration
         Schema::create('route_info', function (Blueprint $table) {
             $table->id();
             $table->integer('car_id');
-            $table->integer('date');
+            $table->string('date');
             $table->string('brand');
             $table->string('number');
             $table->string('fuel_type');
